@@ -1,3 +1,4 @@
+using dquicaliquinS6T1.Views;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 
@@ -23,4 +24,16 @@ public partial class Sitios : ContentPage
         listaSitios.ItemsSource = sit;
     }
 
+    private void listaSitios_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+        var objsitios = (Sitio)e.SelectedItem;
+        Navigation.PushAsync(new vActualizar_Eliminar(objsitios));
+    }
+
+    private void btnAgregar_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new vAgregar());
+    }
 }
+
+

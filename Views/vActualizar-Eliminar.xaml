@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dquicaliquinS6T1.Views.vActualizar_Eliminar"
+             Title="vActualizar_Eliminar">
+    <VerticalStackLayout>
+
+        <Label  Text="Actualizar Sitio"
+        FontSize="20"
+        HorizontalTextAlignment="Center"/>
+
+        <Entry  x:Name="txtIdSitio"
+        Placeholder="Ingrese el Id del Sitio"
+        IsReadOnly="True"/>
+
+        <Entry  x:Name="txtIdUbicacion"
+        Placeholder="Ingrese el Id de la Ubicacion"
+        Keyboard="Numeric"/>
+        
+        <Entry  x:Name="txtNombreSitio"
+        Placeholder="Ingrese el nombre del lugar"/>
+        
+        <Entry  x:Name="txtDescripcionSitio"
+        Placeholder="Ingrese la Descripcion"/>
+        
+        <Entry  x:Name="txtReferenciaSitio"
+        Placeholder="Ingrese la referencia"/>
+
+        <Entry  x:Name="txtLongitudSitio"
+        Placeholder="Ingrese la Longitud"
+        Keyboard="Numeric"/>    
+
+        <Entry  x:Name="txtLatitudSitio"
+        Placeholder="Ingrese la Latitud"
+        Keyboard="Numeric"/>
+        
+        <Entry  x:Name="txtCiudadSitio"
+        Placeholder="Ingrese la Ciudad"/>
+        
+        <Entry  x:Name="txtProvinciaSitio"
+        Placeholder="Ingrese la Provincia"/>
+
+        <Button x:Name="btnActualizar"
+        Text="Actualizar"
+        Clicked="btnActualizar_Clicked"/>
+
+        <Button x:Name="btnEliminar"
+        Text="Eliminar"
+        Clicked="btnEliminar_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>
+    
+    

@@ -54,7 +54,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Sitios.xaml">
+	  <MauiXaml Update="Views\Sitios.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\vActualizar-Eliminar.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\vAgregar.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

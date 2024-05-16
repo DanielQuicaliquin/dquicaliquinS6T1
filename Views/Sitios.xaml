@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dquicaliquinS6T1.Sitios"
+             Title="Sitios">
+    <ScrollView>
+
+        <VerticalStackLayout>
+
+        <Label 
+            Text="Listado de Sitios"
+            FontSize="20"
+            HorizontalTextAlignment="Center"/>
+        <Label 
+            FontSize="20"/>  
+        
+        <Grid BackgroundColor="Blue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Id Sitio" Grid.Column="0" HorizontalTextAlignment="Center" />
+            <Label Text="Id Ubicacion" Grid.Column="1" HorizontalTextAlignment="Center" />
+            <Label Text="Nombre del Lugar" Grid.Column="2" HorizontalTextAlignment="Center" />
+            <Label Text="Descripcion" Grid.Column="3" HorizontalTextAlignment="Center" />
+            <Label Text="Referencia" Grid.Column="4" HorizontalTextAlignment="Center" />
+            <Label Text="Longitud" Grid.Column="5" HorizontalTextAlignment="Center" />
+            <Label Text="Latitud" Grid.Column="6" HorizontalTextAlignment="Center" />
+            <Label Text="Ciudad" Grid.Column="7" HorizontalTextAlignment="Center" />
+            <Label Text="Provincia" Grid.Column="8" HorizontalTextAlignment="Center" />
+        </Grid>
+
+        <ListView x:Name="listaSitios" ItemSelected="listaSitios_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label x:Name="lblIdSitio" Text="{Binding IdSitio} " 
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   HorizontalTextAlignment="Center"/>
+                                <Label x:Name="lblIdUbicacion" Text="{Binding IdUbicacion}" 
+                                   Grid.Row="0"
+                                   Grid.Column="1"
+                                   HorizontalTextAlignment="Center"/>
+                                <Label x:Name="lblNombreSitio" Text="{Binding NombreSitio}" 
+                                   Grid.Row="0"
+                                   Grid.Column="2"
+                                   HorizontalTextAlignment="Center"/>
+                                <Label x:Name="lblDescripcionSitio" Text="{Binding DescripcionSitio}" 
+                                   Grid.Row="0"
+                                   Grid.Column="3"
+                                   HorizontalTextAlignment="Center"/>
+                                <Label x:Name="lblReferenciaSitio" Text="{Binding ReferenciaSitio}" 
+                                   Grid.Row="0"
+                                   Grid.Column="4"
+                                   HorizontalTextAlignment="Center"/>
+                                <Label x:Name="lblLongitudSitio" Text="{Binding LongitudSitio}" 
+                                   Grid.Row="0"
+                                   Grid.Column="5"
+                                   HorizontalTextAlignment="Center"/>
+                                <Label x:Name="lblLatitudSitio" Text="{Binding LatitudSitio}" 
+                                   Grid.Row="0"
+                                   Grid.Column="6"
+                                   HorizontalTextAlignment="Center"/>
+                                <Label x:Name="lblCiudadSitio" Text="{Binding CiudadSitio}" 
+                                   Grid.Row="0"
+                                   Grid.Column="7"
+                                   HorizontalTextAlignment="Center"/>
+                                <Label x:Name="lblProvinciaSitio" Text="{Binding ProvinciaSitio}" 
+                                   Grid.Row="0"
+                                   Grid.Column="8"
+                                   HorizontalTextAlignment="Center"/>
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Label Text="" />
+        <Button x:Name="btnAgregar" Text="Agregar" Clicked="btnAgregar_Clicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+    
+    
+    
